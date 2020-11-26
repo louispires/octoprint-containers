@@ -5,7 +5,6 @@ version: '2.1'
 
 volumes:
   octoprint_vol: {}
-  octoprint_2_vol: {}
 
 services:
   # Octoprint 1
@@ -20,22 +19,6 @@ services:
     privileged: true
     volumes:
       - octoprint_vol:/opt/octoprint/data
-      # Uncomment next line for "Plain Docker" setup
-      # - /run/dbus:/host/run/dbus
-    labels:
-      io.balena.features.dbus: '1'
-  # Octoprint 2
-  octoprint_2:
-    build:
-      context: octoprint
-      args:
-        OP_MACHINE_NAME:
-        release: latest
-    image: amedee/octoprint-octoprint
-    restart: always
-    privileged: true
-    volumes:
-      - octoprint_2_vol:/opt/octoprint/data
       # Uncomment next line for "Plain Docker" setup
       # - /run/dbus:/host/run/dbus
     labels:
