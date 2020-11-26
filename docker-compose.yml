@@ -27,7 +27,7 @@ services:
   # Octoprint 2
   octoprint_2:
     build:
-      context: octoprint_2
+      context: octoprint
       args:
         OP_MACHINE_NAME:
         release: latest
