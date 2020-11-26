@@ -1,6 +1,6 @@
 # Docker-compose file for Octoprint Containers
 
-# Version 2.1 for resin compatibility
+# Version 2.1 for balena compatibility
 version: '2.1'
 
 volumes:
@@ -23,7 +23,7 @@ services:
       # Uncomment next line for "Plain Docker" setup
       # - /run/dbus:/host/run/dbus
     labels:
-      io.resin.features.dbus: '1'
+      io.balena.features.dbus: '1'
   # Octoprint 2
   octoprint_2:
     build:
@@ -39,7 +39,7 @@ services:
       # Uncomment next line for "Plain Docker" setup
       # - /run/dbus:/host/run/dbus
     labels:
-      io.resin.features.dbus: '2'
+      io.balena.features.dbus: '1'
   # Webcam stream
   webcam:
     build:
